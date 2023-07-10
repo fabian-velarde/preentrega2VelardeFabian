@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding-right: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+  }
+ 
+  body{
+    background-color: aquamarine;
+  }
+
+  span {
+    font-weight: 600;
+    color: brown;
+  }
+
+  h1{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    color: darkorchid;
+  }
+
+  div {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  
+  li img{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-left: 30%;
+    width: 100px;
+  }
