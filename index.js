@@ -1,20 +1,18 @@
-const listItems = document.querySelectorAll('#list li');
+const listItems = Array.from(document.querySelectorAll('#list li'));
 
 function filterItems(searchQuery) {
   searchQuery = searchQuery.toLowerCase();
-  
-  listItems.forEach(function(item) {
+
+  const filteredItems = listItems.filter(function(item) {
     const itemText = item.innerText.toLowerCase();
-    
-    if (itemText.includes(searchQuery)) {
+    return itemText.includes(searchQuery);
+  });
+
+  listItems.forEach(function(item) {
+    if (filteredItems.includes(item)) {
       item.style.display = 'block';
     } else {
       item.style.display = 'none';
     }
   });
 }
-
-document.getElementById('searchInput').addEventListener('keyup', function(event) {
-  const searchQuery = event.target.value;
-  filterItems(searchQuery);
-});
